@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scrollbar-color:  rgb(114, 17, 205) orangered;  /* first color is thumb, second is track */
+    scrollbar-width: thin;  /* makes the scrollbar thinner */
+}
+
+/* This styles the entire scrollbar (track + thumb) */
+.sidebar::-webkit-scrollbar {
+    width: 12px;  /* width of the vertical scrollbar */
+    height: 12px; /* height of the horizontal scrollbar */
+}
+
+/* This styles the draggable part of the scrollbar (thumb) */
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: darkgrey;  /* thumb color */
+    border-radius: 6px;  /* rounded corners on the thumb */
+    border: 2px solid orange;  /* creates a border around the thumb */
+}
+
+/* This styles the part of the scrollbar track where the thumb isn't */
+.sidebar::-webkit-scrollbar-track {
+    background: #c40505;  /* track color */
+    border-radius: 6px;  /* rounded corners on the track */
+}
+.center{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    background-color: black;
+    color: aliceblue;
+    height: 100svh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 350px auto;
+    grid-template-rows: 100%;
+
+}
+
+.sidebar{
+    background-color: #1e1b1b;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-y: scroll;
+}
+.content{
+    background-color: rgb(114, 17, 205);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 20px;
+    padding-top: 1rem;
+}
+
+.user{
+    color: black;
+    background-color: #dcd6d6;
+    border-radius: 12px;
+    padding: 1rem 0.5rem;
+    margin: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+.post{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 280px;
+    background-color:azure;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0.8rem;
+    color: #1e1b1b;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.post h3{
+    margin: .25rem 0.5rem;
+    text-align: left;
+    height: 100px;
+}
+.post p{
+    text-align: left;
+    margin: 0 0.5rem 0.5rem;
+    padding: 0.5rem;
+    font-size: 14px;
+    background-color: #eee;
+    height: 120px;
+}
+
+
+.user p:nth-child(2){
+    background-color: green;
+}
+.selected{
+    border: 3px solid orangered;
+    background-color: aliceblue;
+}
